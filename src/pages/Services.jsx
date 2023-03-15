@@ -47,16 +47,46 @@ function Services() {
                     <BsArrowDownSquareFill />
                   </span>
                 </div>
-                <div className="">
+                <div className="collapse-content">
                   <p className="font-light text-sm">
-                    Whether delivering both design and construction under 1
-                    contract (Design-Build) or performing the construction of an
-                    established design (Design-Bid-Build) we are a competitive
-                    and high-quality contractor that works with U.S. Government,
-                    intergovernmental, and commercial clients on a diverse range
-                    of projects in locations across the globe. For our
-                    Design-Build projects, we have established relationships and
-                    maintain a large database of outstanding Architect.
+                    Our construction services encompass a wide range of
+                    projects, including commercial, residential, industrial, and
+                    infrastructure development. We provide turnkey solutions for
+                    all phases of construction, from planning and design to
+                    project management and execution. Our team of experts work
+                    closely with clients to ensure that their vision is
+                    realized, while also taking into account budgetary
+                    constraints and timelines. We use the latest technology and
+                    equipment to ensure that our projects are completed to the
+                    highest quality standards, with a focus on safety and
+                    sustainability.
+                  </p>
+                </div>
+              </div>
+              <div className="collapse">
+                <input type="checkbox" />
+                <div className="collapse-title text-2xl md:gap-0 gap-5 md:text-4xl font-semibold uppercase flex flex-row justify-between items-center py-10">
+                  <span>Electrical services</span>
+                  <span>
+                    <BsArrowDownSquareFill />
+                  </span>
+                </div>
+                <div className="collapse-content">
+                  <p className="font-light text-sm">
+                    Installation, repair, and maintenance of electrical systems
+                    and equipment in buildings, facilities, and industrial
+                    sites. These services include the design and installation of
+                    electrical wiring, lighting systems, power distribution
+                    systems, and electrical control systems. Electrical
+                    contractors also provide troubleshooting and repair services
+                    to address electrical problems such as power outages,
+                    circuit overloads, and electrical equipment malfunctions.
+                    Additionally, electrical contractors offer maintenance
+                    services to ensure that electrical systems continue to
+                    function optimally and efficiently. Overall, electrical
+                    services are essential for ensuring the safe and efficient
+                    operation of electrical systems in residential, commercial,
+                    and industrial settings.
                   </p>
                 </div>
               </div>
@@ -70,14 +100,14 @@ function Services() {
                 </div>
                 <div className="collapse-content">
                   <p className="font-light text-sm">
-                    Energy Audit is defined as “the verification, monitoring and
-                    analysis of use of energy including submission of technical
-                    report containing recommendations for improving energy
-                    efficiency with cost-benefit analysis and an action plan to
-                    reduce energy consumption. Having an energy audit made by an
-                    energy expert is the best way to get a comprehensive view of
-                    the actions that need to be taken in order to improve the
-                    energy efficiency of a company or home.
+                    We specialize in custom solar power installations tailored
+                    to meet the unique needs and requirements of our clients.
+                    Our team of experts works closely with clients to design and
+                    implement solar solutions that maximize energy production,
+                    reduce costs, and minimize environmental impact. From
+                    residential rooftops to large-scale commercial
+                    installations, we have the experience and expertise to
+                    deliver high-quality, customized solar power solutions.
                   </p>
                 </div>
               </div>
@@ -91,15 +121,16 @@ function Services() {
                 </div>
                 <div className="collapse-content">
                   <p className="font-light text-sm">
-                    We know the industry as we have been in business for a long
-                    time. We are experts in renewable energy and environmental
-                    science. We also know our customers’ needs, and keep an eye
-                    on new technologies and trends to provide the best benefits,
-                    solutions and value. Unlike other companies, we do not
-                    charge our customers to cover sales people’s commissions,
-                    cost of leads or company profits. We buy the solar systems
-                    at wholesale prices and contract fully qualified designers
-                    and installers.
+                    We provide reliable and efficient solar equipment
+                    procurement services to clients across various industries.
+                    Our team of experts ensures that the solar equipment we
+                    procure is of the highest quality and meets the specific
+                    needs of our clients. We have established relationships with
+                    top manufacturers and suppliers in the industry, allowing us
+                    to source solar equipment at competitive prices. Whether
+                    it's for a small residential project or a large commercial
+                    installation, we are committed to providing our clients with
+                    the best solar equipment procurement solutions.
                   </p>
                 </div>
               </div>
@@ -113,14 +144,20 @@ function Services() {
                 </div>
                 <div className="collapse-content">
                   <p className="font-light text-sm">
-                    Whether delivering both design and construction under 1
-                    contract (Design-Build) or performing the construction of an
-                    established design (Design-Bid-Build) we are a competitive
-                    and high-quality contractor that works with U.S. Government,
-                    intergovernmental, and commercial clients on a diverse range
-                    of projects in locations across the globe. For our
-                    Design-Build projects, we have established relationships and
-                    maintain a large database of outstanding Architect.
+                    Solar Powered Boreholes are water systems that utilize solar
+                    energy to pump water from underground sources to the
+                    surface. These systems are a reliable and sustainable source
+                    of water for communities, farms, and rural areas where
+                    access to water is limited or nonexistent. The solar panels
+                    used to power the boreholes are designed to convert sunlight
+                    into electricity, which is stored in batteries for use when
+                    the sun is not shining. This method of pumping water is
+                    cost-effective, environmentally friendly, and provides a
+                    long-term solution to water scarcity. The installation of
+                    solar-powered boreholes has proven to be a game-changer in
+                    many areas around the world, providing clean and safe water
+                    to communities and reducing their dependence on traditional
+                    energy sources.
                   </p>
                 </div>
               </div>

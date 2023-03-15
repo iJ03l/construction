@@ -15,12 +15,17 @@ function Contact() {
           id="image-set2"
         >
           <div className="flex flex-col w-full items-left px-0 py-7 md:px-40 md:pt-40 md:py-0 justify-center">
-            <h1 className="md:py-4 md:px-0 px-10 text-3xl font-semibold py-5">Get in touch</h1>
+            <h1 className="md:py-4 md:px-0 px-10 text-3xl font-semibold py-5">
+              Get in touch
+            </h1>
             <p className="md:text-lg md:px-0 px-10">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Praesentium sed sapiente fuga. Alias nam, earum corrupti, ipsam
-              praesentium dicta eius ipsum sapiente distinctio quas veniam.
-              Minima placeat neque laborum officiis!
+              We welcome the opportunity to connect with you. Whether you have a
+              question, a project in mind, or just want to learn more about our
+              services, we encourage you to get in touch. Our team of experts is
+              always available to provide you with the information and guidance
+              you need to make informed decisions about your renewable energy,
+              construction, or environmental project. Contact us today to get
+              started.
             </p>
           </div>
 

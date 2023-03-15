@@ -32,7 +32,7 @@ function Home() {
             <div className="lg:pb-10 pr-4 lg:pr-0">
               <h1 className="text-jet text-[2.5rem] py-5 lg:text-[3rem] lg:text-5xl font-extrabold tracking-wider uppercase lg:pt-20 ">
                 <span className="text-green-600">
-                  Experience
+                  Unleashing excellence through
                   <TypeWriterEffect
                     textStyle={{
                       fontFamily: "Montserrat, sans-serif",
@@ -49,13 +49,15 @@ function Home() {
                 </span>
               </h1>
               <p className="text-black lg:pr-20 w-full pr-4 lg:my-5 lg:tracking-wide lg:text-xl lg:first-line lg:font-medium font-light">
-                we are committed to excellence in all that we do. Our team of
-                skilled craftsmen and licensed electricians work together to
-                deliver exceptional results that exceed our clients'
-                expectations. Our vision is to set a new standard for excellence
-                and innovation in construction and electrical services, building
-                strong relationships with our clients through our commitment to
-                quality and expertise.
+                At the core of our business philosophy is a relentless pursuit
+                of excellence. Our highly skilled team of craftsmen and licensed
+                electricians collaborate seamlessly to achieve outstanding
+                outcomes that go beyond our clients' expectations. Our
+                aspiration is to establish a new benchmark for construction and
+                electrical services by demonstrating unparalleled levels of
+                innovation and excellence, and fostering enduring partnerships
+                with our clients through our unwavering focus on quality and
+                proficiency.
               </p>
               <NavLink to="/about">
                 <button className="btn hover:shadow-lg hover:bg-warning hover:text-white lg:btn-lg btn-warning flex flex-row justify-center items-center gap-3 my-4 text-black">
@@ -90,9 +92,13 @@ function Home() {
               renewable energy and environmental science
             </h1>
             <p className="text-gray-500 w-full pr-4 lg:my-5 lg:tracking-wide lg:text-xl font-semibold">
-              We also know our customers’ needs and keep an eye on new
-              technological trends to provide the best benefits, solutions and
-              value.
+              As a leading company in the renewable energy and environmental
+              science field, we have accumulated a wealth of expertise and
+              experience that sets us apart from others in the industry. Our
+              team of highly skilled and knowledgeable professionals is
+              dedicated to staying at the forefront of the latest technological
+              and scientific developments, allowing us to provide our clients
+              with innovative solutions and top-tier services.
             </p>
           </div>
           <div className="lg:col-span-6 col-span-12 h-[300px] lg:h-[500px] ">
@@ -115,20 +121,17 @@ function Home() {
             />
           </div>
           <div className="lg:col-span-6 col-span-12 flex flex-col items-left pl-9 pr-16 py-14 justify-center w-full text-muted h-full">
-            <h1 className="text-green-600 text-[2.5rem] py-1">
-              <span className="text-muted font-bold">ONE TEAM.</span> ONE
-              PURPOSE
+            <h1 className="text-green-600 uppercase text-[2.5rem] py-1">
+              <span className="text-muted font-bold">United in Purpose</span>{" "}
+              Driven by Teamwork.
             </h1>
             <p className="text-black w-full pr-4 lg:my-5 lg:tracking-wide lg:text-xl text-muted lg:pb-0 md:pb-32">
-              Each member of RELYANT’s executive and management team holds a set
-              of unique capabilities and a long history of success in performing
-              construction, engineering, munitions response, environmental
-              remediation, logistics support, facility maintenance, training,
-              and other expeditionary support services. Only a small percentage
-              of companies are qualified and experienced in the management of
-              all of these services, especially in austere or remote locations.
-              RELYANT’s pledge on each project, to each and every client, is
-              that we are one team with one purpose: success.
+              Our team works together towards a shared vision and common purpose
+              of providing exceptional services, promoting sustainable
+              development, and making a positive impact on the world. We uphold
+              the highest standards of excellence and professionalism in all our
+              endeavors, and believe that by working collaboratively, we can
+              achieve more than any one individual could accomplish alone.
             </p>
           </div>
         </div>
@@ -150,15 +153,16 @@ function Home() {
                   <li>
                     <h3 className="title font-semibold">
                       {" "}
-                      We are Experts in renewable energy and environmental
-                      science
+                      We are Experts in Construction and Electrical services
                     </h3>
                     <p>
-                      We also know our customers’ needs and keep an eye on new
-                      technological trends to provide the best benefits,
-                      solutions and value.
+                      Our team of skilled craftsmen and licensed electricians
+                      work together to deliver exceptional results that exceed
+                      our clients' expectations. With a commitment to excellence
+                      and innovation, we strive to set a new standard in the
+                      construction and electrical services industry.
                     </p>
-                    <a href="#">Read More </a>
+                    <a href="Services">Read More </a>
                     <span className="circle"></span>
                   </li>
                   <li>
@@ -166,10 +170,11 @@ function Home() {
                       Solar Power Custom Installation
                     </h3>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolorem eaque quidem esse? Incidunt, odit beatae?
+                      From residential rooftops to large-scale commercial
+                      installations, we have the experience and expertise to
+                      deliver high-quality, customized solar power solutions.
                     </p>
-                    <a href="#">Read More</a>
+                    <a href="/Services">Read More</a>
                     <span className="circle"></span>
                   </li>
                   <li>
@@ -177,10 +182,12 @@ function Home() {
                       Solar Equipment Procurement
                     </h3>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolorem eaque quidem esse? Incidunt, odit beatae?
+                      Whether it's for a small residential project or a large
+                      commercial installation, we are committed to providing our
+                      clients with the best solar equipment procurement
+                      solutions.
                     </p>
-                    <a href="#">Read More</a>
+                    <a href="services">Read More</a>
                     <span className="circle"></span>
                   </li>
                   <li>
@@ -188,10 +195,12 @@ function Home() {
                       Solar Powered Boreholes
                     </h3>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolorem eaque quidem esse? Incidunt, odit beatae?
+                      The installation of solar-powered boreholes has proven to
+                      be a game-changer in many areas around the world,
+                      providing clean and safe water to communities and reducing
+                      their dependence on traditional energy sources.
                     </p>
-                    <a href="#">Read More </a>
+                    <a href="Services">Read More </a>
                     <span className="circle"></span>
                   </li>
                 </ul>

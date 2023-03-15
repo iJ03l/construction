@@ -101,6 +101,7 @@ import { Link, NavLink} from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
 import { useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
+import logo from "../assets/images/logo.png";
 
 function Navbar() {
   const [ togglerNav, setTogglerNav ] = useState(false);
@@ -115,7 +116,7 @@ function Navbar() {
         <Link to="/">
           <img
             className="w-32"
-            src="https://cdn-icons-png.flaticon.com/512/5968/5968204.png"
+            src={logo}
             alt="logo-image"
           />
         </Link>

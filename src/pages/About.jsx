@@ -8,7 +8,7 @@ import TypeWriterEffect from "react-typewriter-effect";
 function About() {
   return (
     <div>
-      <div className="grid w-full grid-cols-12 mb-10 ">
+      <div className="grid w-full grid-cols-12 h-full mb-10 ">
         <div className="col-span-12 w-full h-96 " id="image-set">
           <h1 className="flex text-white font-monserrat text-5xl uppercase font-semibold items-center justify-center h-full w-full text-center flex-col">
             <span className="text-3xl">Here's{""}</span>
@@ -28,16 +28,22 @@ function About() {
                   }}
                   startDelay={2000}
                   cursorColor="rgb(22 163 74)"
-                  multiText={["we are awesome"]}
+                  multiText={[
+                    "Discover Our Story: Passion, Precision, and Perseverance in Every Project",
+                  ]}
                   multiTextDelay={2000}
-                  typeSpeed={100}
+                  typeSpeed={60}
                 />
               </h1>
               <p className="text-2xl">
-                To be a pacesetter in the development and construction sector
-                known for exceptional quality, integrity and resourcefulness.
-                And our MISSION is to Provide Value added services to clients by
-                consistently improving our levels of service delivery.
+                At the forefront of the development and construction industry,
+                we strive to set the pace with our unwavering commitment to
+                exceptional quality, uncompromising integrity, and unparalleled
+                resourcefulness. Our overarching mission is to enhance the value
+                we offer to our clients by continually elevating the standards
+                of our service delivery. With a relentless focus on continuous
+                improvement, we are dedicated to delivering value-added services
+                that meet and exceed our clients' expectations.
               </p>
             </div>
             <div className="md:col-span-6 col-span-12 p-6">
@@ -55,35 +61,53 @@ function About() {
               </h1>
               <div className="flex md:flex-row flex-col md:gap-4 text-white">
                 <div>
-                  We are one of Nigeria’s leading commercial renewable energy
-                  companies. Incorporated in 1991, we have turned businesses,
-                  SMEs’ and government sites into ecosystems of sustainable
-                  energy through rooftop solar panels, battery storage and solar
-                  carports. Our partnership with some of the biggest brands in
-                  the industry has enabled us to deliver financial savings and
-                  renewable energy for our clients all over the country.
+                  As a prominent player in Nigeria's thriving renewable energy
+                  sector, we have established ourselves as a premier provider of
+                  sustainable solutions since our inception in 1991. With our
+                  extensive expertise, we have transformed numerous businesses,
+                  SMEs, and government sites into vibrant ecosystems of
+                  renewable energy through the installation of cutting-edge
+                  rooftop solar panels, innovative battery storage systems, and
+                  state-of-the-art solar carports. Our unwavering commitment to
+                  delivering sustainable solutions has led us to collaborate
+                  with some of the most prominent brands in the industry,
+                  enabling us to provide our clients with unrivaled financial
+                  savings and renewable energy across the length and breadth of
+                  the country. With a dedicated team of seasoned professionals
+                  and a passion for excellence, we are committed to forging
+                  long-lasting partnerships with our clients and delivering
+                  sustainable energy solutions that inspire and uplift
+                  communities.
                 </div>
                 <div>
-                  Our expertise in rooftop solar panels is unparalleled. We have
-                  truly left the pack behind because whilst our competitors were
-                  focusing on mounting rooftop solutions, we charted a new path
-                  by heralding the installation of solar carports. By constantly
-                  striving to provide bespoke solar solutions for our numerous
-                  clients, we have been able to maintain our focus and this has
-                  allowed us to continually raise the bar and set the standards
-                  in a solar installation across the country. By leveraging on
-                  our relationships with other international engineering firms
-                  and our technical partners, we are able to keep pace with the
-                  innovation around the World.
+                  When it comes to rooftop solar panels, our unparalleled
+                  expertise is second to none. While our competitors were
+                  fixated on mounting rooftop solutions, we blazed a new trail
+                  by spearheading the installation of groundbreaking solar
+                  carports. Our unwavering commitment to providing tailored
+                  solar solutions for our diverse clientele has been the driving
+                  force behind our success, enabling us to maintain an
+                  unwavering focus and continuously raise the bar in solar
+                  installation across the nation. By leveraging our strategic
+                  partnerships with leading international engineering firms and
+                  technical partners, we remain at the forefront of the latest
+                  innovations and technological advancements in the field. This
+                  enables us to keep pace with global trends and provide our
+                  clients with bespoke, cutting-edge solutions that are tailored
+                  to their unique needs and requirements. With a passion for
+                  excellence and a track record of delivering outstanding
+                  results, we remain dedicated to setting the standards in solar
+                  installation and propelling the renewable energy sector
+                  forward.
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-12 items-center mt-10">
+          <div className="grid grid-cols-12 justify-center flex-1 items-center -mt-20 ">
             <div className="col-span-12 font-monserrat my-10">
               <h1
-                className="w-full flex gap-2 items-center
+                className="w-full flex h-96 gap-2 items-center
                justify-center font-bold uppercase md:text-5xl text-xl text-green-800"
               >
                 <span>Here's what </span>
@@ -91,33 +115,48 @@ function About() {
                   we stand for
                 </span>
               </h1>
-              <div className="flex md:flex-row flex-col flex-wrap items-center justify-center gap-4">
-                <div className="flex flex-col text-center w-72 h-80 gap-3 items-center justify-center">
+              <div className="flex md:flex-row flex-col -mt-20 flex-wrap items-center self-start justify-center gap-8">
+                <div className="flex flex-col text-center w-80 gap-3 items-center self-start justify-center">
                   <img src={icon1} className="w-28" alt="dummy" />
                   <h1 className="text-3xl font-bold text-green-700">
                     ACCOUNTABILITY
                   </h1>
                   <p className="text-xl">
-                    We take responsibility for our actions and decisions.
+                    Assuming responsibility for our actions and decisions is at
+                    the core of our company's values and ethos. We believe that
+                    our every decision and action has a consequential impact on
+                    our clients, team members, and the broader community. As
+                    such, we approach each project with a profound sense of care
+                    and diligence, fully acknowledging that we are accountable
+                    for the outcomes of our actions.
                   </p>
                 </div>
 
-                <div className="flex flex-col text-center  w-72 h-80  gap-3 items-center justify-center">
+                <div className="flex flex-col text-center w-80 gap-3 items-center self-start justify-center">
                   <img src={icon3} className="w-28" alt="dummy" />
                   <h1 className="text-3xl font-bold text-green-700">
                     EXCELLENCE
                   </h1>
                   <p className="text-xl">
-                    Our work is carried out with the highest standards.
+                    we hold ourselves to the highest standards of excellence and
+                    professionalism in all aspects of our work. We understand
+                    that our clients entrust us with their most valuable assets,
+                    and we take this responsibility very seriously. As such, we
+                    approach every project with an unwavering commitment to
+                    quality, precision, and attention to detail.
                   </p>
                 </div>
 
-                <div className="flex flex-col text-center w-72 h-80  gap-3 items-center justify-center">
+                <div className="flex flex-col text-center w-80  gap-3 items-center self-start justify-center">
                   <img src={icon2} className="w-28 text-3xl " alt="dummy" />
                   <h1 className="text-3xl font-bold text-green-700">RESPECT</h1>
                   <p className="text-xl">
-                    We respect our fellow employees, clients, contractors, and
-                    suppliers.
+                    Respect is a cornerstone of our company culture, and we hold
+                    it in high regard in all our interactions with fellow
+                    employees, clients, contractors, and suppliers. We believe
+                    that by treating everyone with dignity and respect, we can
+                    foster an environment of inclusivity, trust, and
+                    collaboration.
                   </p>
                 </div>
               </div>
