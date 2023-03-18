@@ -1,6 +1,37 @@
-import React from 'react'
+import React, { useState } from "react";
 
 function Contact() {
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = {
+      fullname,
+      email,
+      phone,
+      message,
+    };
+
+    fetch("http://localhost:3000/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
   return (
     <div>
       <div className="w-full h-96" id="image-set1">
@@ -68,7 +99,7 @@ function Contact() {
                 />
               </svg>
             </span>
-            <p>+1 (555) 234-5678</p>
+            <p>+234-806-757-8779  +234-708-947-7842</p>
           </div>
           <div className="flex items center text-left gap-3 md:gap-4 md:pl-40 md:pr-60 md:py-5 md:mb-5 mb-5 px-10">
             <span>
@@ -88,7 +119,7 @@ function Contact() {
               </svg>
             </span>
             <a href="#" className="link">
-              info.global@gmail.com
+              info@luckylumac.com
             </a>
           </div>
         </div>
@@ -99,54 +130,69 @@ function Contact() {
               WILL CONTACT YOU.
             </h1>
 
-            <div>
-              <div className="card-body md:px-0 px-10 py-2">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Fullname</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="full name"
-                    className="input input-bordered"
-                  />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Email</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="email"
-                    className="input input-bordered"
-                  />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Phone number</span>
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="phone number"
-                    className="input input-bordered"
-                  />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Questions & Comments</span>
-                  </label>
-                  <textarea
-                    placeholder="Type Here..."
-                    className="textarea textarea-bordered textarea-lg w-full"
-                  ></textarea>
-                </div>
-                <div className="form-control mt-6">
-                  <button className="btn bg-green-500 border-none">
-                    submit
-                  </button>
+            <form onSubmit={handleSubmit}>
+              <div>
+                <div className="card-body md:px-0 px-10 py-2">
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Fullname</span>
+                    </label>
+                    <input
+                      name="name"
+                      type="text"
+                      placeholder="full name"
+                      className="input input-bordered"
+                      value={fullname}
+                      onChange={(event) => setFullname(event.target.value)}
+                    />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Email</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="email"
+                      className="input input-bordered"
+                      value={email}
+                      onChange={(event) => setEmail(event.target.value)}
+                    />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Phone number</span>
+                    </label>
+                    <input
+                      name="phone"
+                      type="tel"
+                      placeholder="phone number"
+                      className="input input-bordered"
+                      value={phone}
+                      onChange={(event) => setPhone(event.target.value)}
+                    />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Questions & Comments</span>
+                    </label>
+                    <textarea
+                      placeholder="Type Here..."
+                      className="textarea textarea-bordered textarea-lg w-full"
+                      value={message}
+                      onChange={(event) => setMessage(event.target.value)}
+                    ></textarea>
+                  </div>
+                  <div className="form-control mt-6">
+                    <button
+                      value="Send"
+                      className="btn bg-green-500 border-none"
+                    >
+                      submit
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

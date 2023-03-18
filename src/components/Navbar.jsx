@@ -102,6 +102,8 @@ import { FaBars } from 'react-icons/fa'
 import { useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import logo from "../assets/images/logo.png";
+import { motion } from 'framer-motion'
+import ReactDOM from "react-dom";
 
 function Navbar() {
   const [ togglerNav, setTogglerNav ] = useState(false);
@@ -110,15 +112,24 @@ function Navbar() {
       setTogglerNav(!togglerNav);
     
   }
+  function Mailto({ email, subject, body, ...props }) {
+    return (
+      <a href={`mailto:${email}?subject=${subject || ""}&body=${body || ""}`}>
+        {props.children}
+      </a>
+    );
+  }
+
   return (
-    <nav className="h-auto md:my-auto fixed md:py-5 z-10 md:px-6 shadow-lg p2 bg-white w-full mx-auto transition-all ease-in-out">
+    <motion.nav
+      initial={{ y: -50 }}
+      animate={{ y: 0 }}
+      transition={{ delay: 0.4, type: "spring" }}
+      className="h-auto md:my-auto fixed md:py-5 z-10 md:px-6 shadow-lg p2 bg-white w-full mx-auto transition-all ease-in-out"
+    >
       <div className="flex justify-between md:items-center items-center px-6 md:px-0">
         <Link to="/">
-          <img
-            className="w-32"
-            src={logo}
-            alt="logo-image"
-          />
+          <img className="w-32" src={logo} alt="logo-image" />
         </Link>
         <div className="hidden md:flex">
           <NavLink className="nav-link" to="/" onClick={clickHandler}>
@@ -157,29 +168,32 @@ function Navbar() {
                   />
                 </svg>
               </span>
-              <span id="show"> (+234)-234-2223-43</span>
+              <span id="show"> (+234)-806-757-8779</span>
             </button>
           </div>
 
           <div className="tooltip tooltip-bottom" data-tip="Send us a mail">
-            <button className="py-3 px-5 btn bg-green-600 rounded-lg border-none text-white hover:shadow-lg">
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                  />
-                </svg>
-              </span>
-            </button>
+            <Mailto email="info@luckylumac.com">
+              <button className="py-3 px-5 btn bg-green-600 rounded-lg border-none text-white hover:shadow-lg">
+                {" "}
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </Mailto>
           </div>
         </div>
 
@@ -214,7 +228,7 @@ function Navbar() {
           Contact
         </NavLink>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

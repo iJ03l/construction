@@ -3,15 +3,20 @@ import image1 from "../assets/images/construction-image4.jpg";
 import image2 from "../assets/images/projects1.jpeg";
 import image3 from "../assets/images/projects2.jpeg";
 import { BsArrowDownSquareFill } from 'react-icons/bs'
-
+import { motion } from 'framer-motion'
 function Services() {
   return (
     <div className="flex flex-col">
       <div className="w-full h-96" id="image-set">
-        <h1 className="flex text-white font-monserrat text-5xl uppercase font-semibold items-center justify-center h-full w-full text-center flex-col">
+        <motion.h1
+          initial={{ x: -1000 }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.6 }}
+          className="flex text-white font-monserrat text-5xl uppercase font-semibold items-center justify-center h-full w-full text-center flex-col"
+        >
           <span className="text-3xl text-warning">our{""}</span>
           <span>services</span>
-        </h1>
+        </motion.h1>
       </div>
 
       <div>

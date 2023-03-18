@@ -13,6 +13,7 @@ import image8 from "../assets/images/project-image-8.jpeg";
 import TypeWriterEffect from 'react-typewriter-effect';
 import '../pages/timeline.css'
 import { Link, NavLink} from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 function Home() {
   return (
@@ -49,15 +50,17 @@ function Home() {
                 </span>
               </h1>
               <p className="text-black lg:pr-20 w-full pr-4 lg:my-5 lg:tracking-wide lg:text-xl lg:first-line lg:font-medium font-light">
-                At the core of our business philosophy is a relentless pursuit
-                of excellence. Our highly skilled team of craftsmen and licensed
-                electricians collaborate seamlessly to achieve outstanding
-                outcomes that go beyond our clients' expectations. Our
-                aspiration is to establish a new benchmark for construction and
-                electrical services by demonstrating unparalleled levels of
-                innovation and excellence, and fostering enduring partnerships
-                with our clients through our unwavering focus on quality and
-                proficiency.
+                We are a construction and electrical firm with extensive
+                experience in building top-quality infrastructure. Our team of
+                experts is dedicated to delivering exceptional services and
+                ensuring that all projects are completed on time and within
+                budget. Whether you're looking for custom solar installations,
+                energy audits, equipment procurement, or any other construction
+                or electrical services, we've got you covered. From concept to
+                completion, we're here to provide you with the highest quality
+                of service and deliver exceptional results that exceed your
+                expectations. Don't wait, let's get started on your next project
+                today!
               </p>
               <NavLink to="/about">
                 <button className="btn hover:shadow-lg hover:bg-warning hover:text-white lg:btn-lg btn-warning flex flex-row justify-center items-center gap-3 my-4 text-black">
@@ -85,21 +88,34 @@ function Home() {
         </div>
         <div className="lg:grid lg:grid-cols-12 flex flex-col-reverse">
           <div className="lg:col-span-6 col-span-12 green-bg flex flex-col items-left pl-9 pr-16 py-14 justify-center w-full h-full">
-            <h1 className="text-gray-500 uppercase text-[2.3rem] md:text-[2.5rem] text-muted py-1">
+            <motion.h1
+              initial={{ x: -250 }}
+              animate={{ x: 0, y: -10 }}
+              className="text-gray-500 uppercase text-[2.3rem] md:text-[2.5rem] text-muted py-1"
+            >
               <span className="text-warning font-bold uppercase">
-                We are Experts in
+                Our Technical Expertise
               </span>{" "}
-              renewable energy and environmental science
-            </h1>
-            <p className="text-gray-500 w-full pr-4 lg:my-5 lg:tracking-wide lg:text-xl font-semibold">
-              As a leading company in the renewable energy and environmental
-              science field, we have accumulated a wealth of expertise and
-              experience that sets us apart from others in the industry. Our
-              team of highly skilled and knowledgeable professionals is
-              dedicated to staying at the forefront of the latest technological
-              and scientific developments, allowing us to provide our clients
-              with innovative solutions and top-tier services.
-            </p>
+              in Building and Power Solutions.
+            </motion.h1>
+            <motion.p
+              initial={{ x: "-100vw" }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-gray-500 w-full pr-4 lg:my-5 lg:tracking-wide lg:text-xl font-semibold"
+            >
+              With years of experience in the construction and electrical
+              industry, we have developed a deep understanding of the technical
+              aspects of building and maintaining infrastructure. Our team of
+              experts are highly skilled in areas such as project management,
+              design, engineering, construction, installation, and maintenance.
+              We utilize the latest tools, technologies, and techniques to
+              ensure that we deliver the highest quality workmanship, while
+              adhering to strict safety and regulatory standards. Whether it’s a
+              commercial or residential project, we have the expertise to take
+              on any challenge and provide tailored solutions to meet your
+              specific needs.
+            </motion.p>
           </div>
           <div className="lg:col-span-6 col-span-12 h-[300px] lg:h-[500px] ">
             <img

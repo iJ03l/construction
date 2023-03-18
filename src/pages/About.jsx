@@ -4,16 +4,17 @@ import icon1 from "../assets/images/ico1.png";
 import icon2 from "../assets/images/ico3.png";
 import icon3 from "../assets/images/ico2.png";
 import TypeWriterEffect from "react-typewriter-effect";
+import { motion } from 'framer-motion'
 
 function About() {
   return (
     <div>
       <div className="grid w-full grid-cols-12 h-full mb-10 ">
         <div className="col-span-12 w-full h-96 " id="image-set">
-          <h1 className="flex text-white font-monserrat text-5xl uppercase font-semibold items-center justify-center h-full w-full text-center flex-col">
+          <motion.h1 initial={{ y: -100}} animate={{ y: 0}} transition={{delay: 0.6}} className="flex text-white font-monserrat text-5xl uppercase font-semibold items-center justify-center h-full w-full text-center flex-col">
             <span className="text-3xl">Here's{""}</span>
             <span>who we are</span>
-          </h1>
+          </motion.h1>
         </div>
         <div className="col-span-12 -mt-[7%] w-[80%] mx-auto bg-white shadow-xl">
           <div className="grid grid-cols-12 font-monserrat items-center  w-full">
