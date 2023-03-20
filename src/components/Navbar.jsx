@@ -99,13 +99,17 @@
 
 import { Link, NavLink} from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
-import { useState } from 'react'
+import { IoMdArrowDropdown } from "react-icons/io";
+import { useState,  useEffect } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import logo from "../assets/images/logo.png";
 import { motion } from 'framer-motion'
 import ReactDOM from "react-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Navbar() {
+   const [show, setShow] = useState(false);
   const [ togglerNav, setTogglerNav ] = useState(false);
   const clickHandler = () => {
     
@@ -120,14 +124,16 @@ function Navbar() {
     );
   }
 
+    useEffect(() => {
+      Aos.init({ duration: 3000 }, []);
+    });
+
   return (
-    <motion.nav
-      initial={{ y: -50 }}
-      animate={{ y: 0 }}
-      transition={{ delay: 0.4, type: "spring" }}
-      className="h-auto md:my-auto fixed md:py-5 z-10 md:px-6 shadow-lg p2 bg-white w-full mx-auto transition-all ease-in-out"
-    >
-      <div className="flex justify-between md:items-center items-center px-6 md:px-0">
+    <motion.nav className="h-auto md:my-auto fixed md:py-5 z-10 md:px-6 shadow-lg p2 bg-white w-full mx-auto transition-all ease-in-out">
+      <div
+        className="flex justify-between md:items-center items-center px-6 md:px-0"
+        data-aos="fade-in"
+      >
         <Link to="/">
           <img className="w-32" src={logo} alt="logo-image" />
         </Link>
@@ -138,9 +144,45 @@ function Navbar() {
           <NavLink className="nav-link" to="/about" onClick={clickHandler}>
             Who are we?
           </NavLink>
-          <NavLink className="nav-link" to="/services" onClick={clickHandler}>
-            services
-          </NavLink>
+          <button
+            className="mx-1 md:border-0 border-b-2 px-6 py-4 text-black font-semibold text-sm uppercase hover:bg-green-600 hover:text-white hover:rounded-lg hover:shadow-lg transition ease-in-out"
+            id="dropdown"
+          >
+            <div className="flex items-center justify-center gap-2">
+              <span>services</span>
+              <span>
+                <IoMdArrowDropdown className="text-2xl" />
+              </span>
+            </div>
+
+            <div
+              className="absolute -bottom-28 shadow-xl bg-white block text-xs pb-5"
+              id="dropper"
+            >
+              <ul>
+                <li className="px-6 py-4 ">
+                  {" "}
+                  <NavLink
+                    className="mx-1 md:border-0 border-b-2 px-6 py-4 font-semibold uppercase hover:bg-green-600 hover:text-white hover:rounded-lg hover:shadow-lg transition ease-in-out text-left text-xs w-full float-left"
+                    to="/construction"
+                    onClick={clickHandler}
+                  >
+                    Construction Services
+                  </NavLink>
+                </li>
+                <li className="px-6 py-4">
+                  <NavLink
+                    className="mx-1 md:border-0 border-b-2 px-6 py-4 font-semibold uppercase hover:bg-green-600 hover:text-white hover:rounded-lg hover:shadow-lg transition ease-in-out text-left text-xs w-full float-left"
+                    to="/services"
+                    onClick={clickHandler}
+                  >
+                    Electrical (Renewable Energy) Services
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </button>
+
           <NavLink className="nav-link" to="/projects" onClick={clickHandler}>
             projects
           </NavLink>
@@ -218,9 +260,34 @@ function Navbar() {
         <NavLink className="nav-link" to="/about" onClick={clickHandler}>
           Who are we?
         </NavLink>
-        <NavLink className="nav-link" to="/services" onClick={clickHandler}>
-          services
-        </NavLink>
+        <button
+          className="mx-1 md:border-0 border-b-2 px-6 py-4 font-semibold text-sm uppercase transition ease-in-out w-full "
+          onClick={() => setShow(true)}
+        >
+          <div className="flex items-center justify-between text-gray-400">
+            <span className="font-bold">services</span>
+            <span className="text-2xl">
+              <IoMdArrowDropdown />
+            </span>
+          </div>
+        </button>
+        <div className="ml-5 border-l-4 border-green-600">
+          <NavLink
+            className="nav-link text-left w-full float-left"
+            to="/construction"
+            onClick={clickHandler}
+          >
+            Construction Services
+          </NavLink>
+
+          <NavLink
+            className="nav-link w-full float-left"
+            to="/services"
+            onClick={clickHandler}
+          >
+            Electrical (Renewable Energy) Services
+          </NavLink>
+        </div>
         <NavLink className="nav-link" to="/projects" onClick={clickHandler}>
           projects
         </NavLink>

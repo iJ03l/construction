@@ -1,25 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import construction1 from "../assets/images/construction-image-null.jpg";
 import icon1 from "../assets/images/ico1.png";
 import icon2 from "../assets/images/ico3.png";
 import icon3 from "../assets/images/ico2.png";
 import TypeWriterEffect from "react-typewriter-effect";
 import { motion } from 'framer-motion'
+import { IoMdArrowDropdown } from 'react-icons/io'
+import WeOffer from "../components/WeOffer";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function About() {
+
+    useEffect(() => {
+      Aos.init({ duration: 2000 }, []);
+    });
+
   return (
-    <div>
-      <div className="grid w-full grid-cols-12 h-full mb-10 ">
+    <div className="overflow-x-hidden">
+      <div className="grid w-full grid-cols-12 h-full mb-10 overflow-x-hidden " >
         <div className="col-span-12 w-full h-96 " id="image-set">
-          <motion.h1 initial={{ y: -100}} animate={{ y: 0}} transition={{delay: 0.6}} className="flex text-white font-monserrat text-5xl uppercase font-semibold items-center justify-center h-full w-full text-center flex-col">
+          <motion.h1
+            className="flex text-white font-monserrat md:text-5xl uppercase font-semibold md:items-center items-center md:justify-center md:mt-0 mt-12 h-full w-full text-center flex-col"
+            data-aos="slide-in"
+          >
             <span className="text-3xl">Here's{""}</span>
             <span>who we are</span>
+            <IoMdArrowDropdown className="text-2xl text-warning" />
           </motion.h1>
+          <div></div>
         </div>
-        <div className="col-span-12 -mt-[7%] w-[80%] mx-auto bg-white shadow-xl">
+        <div className="col-span-12 md:-mt-[7%] -mt-[30%] md:w-[80%] mx-auto bg-white shadow-xl">
           <div className="grid grid-cols-12 font-monserrat items-center  w-full">
             <div className="md:col-span-6 col-span-12 md:p-20 p-6">
-              <h1 className="text-4xl py-5 font-bold uppercase text-green-600">
+              <h1 className="md:text-4xl text-xl py-5 font-bold uppercase text-green-600">
                 <TypeWriterEffect
                   textStyle={{
                     fontFamily: "Montserrat, sans-serif",
@@ -36,7 +50,7 @@ function About() {
                   typeSpeed={60}
                 />
               </h1>
-              <p className="text-2xl">
+              <p className="text-lg" data-aos="fade-in">
                 At the forefront of the development and construction industry,
                 we strive to set the pace with our unwavering commitment to
                 exceptional quality, uncompromising integrity, and unparalleled
@@ -47,7 +61,10 @@ function About() {
                 that meet and exceed our clients' expectations.
               </p>
             </div>
-            <div className="md:col-span-6 col-span-12 p-6">
+            <div
+              className="md:col-span-6 col-span-12 p-6"
+              data-aos="slide-left"
+            >
               <img src={construction1} alt="construction image" />
             </div>
           </div>
@@ -56,7 +73,10 @@ function About() {
               {/* <img src={construction1} alt="dummy" /> */}
             </div>
             <div className="md:col-span-9 bg-gray-800 col-span-12 md:p-20 p-6">
-              <h1 className="text-6xl py-5 font-bold uppercase text-green-600">
+              <h1
+                className="text-6xl py-5 font-bold uppercase text-green-600"
+                data-aos="zoom-in"
+              >
                 <span className="font-light text-warning">Vision &</span>{" "}
                 mission
               </h1>
@@ -105,64 +125,41 @@ function About() {
             </div>
           </div>
 
-          <div className="grid grid-cols-12 justify-center flex-1 items-center -mt-20 ">
-            <div className="col-span-12 font-monserrat my-10">
-              <h1
-                className="w-full flex h-96 gap-2 items-center
-               justify-center font-bold uppercase md:text-5xl text-xl text-green-800"
-              >
-                <span>Here's what </span>
-                <span className="font-medium md:font-thin w-50 text-warning">
-                  we stand for
-                </span>
-              </h1>
-              <div className="flex md:flex-row flex-col -mt-20 flex-wrap items-center self-start justify-center gap-8">
-                <div className="flex flex-col text-center w-80 gap-3 items-center self-start justify-center">
-                  <img src={icon1} className="w-28" alt="dummy" />
-                  <h1 className="text-3xl font-bold text-green-700">
-                    ACCOUNTABILITY
-                  </h1>
-                  <p className="text-xl">
-                    Assuming responsibility for our actions and decisions is at
-                    the core of our company's values and ethos. We believe that
-                    our every decision and action has a consequential impact on
-                    our clients, team members, and the broader community. As
-                    such, we approach each project with a profound sense of care
-                    and diligence, fully acknowledging that we are accountable
-                    for the outcomes of our actions.
-                  </p>
-                </div>
-
-                <div className="flex flex-col text-center w-80 gap-3 items-center self-start justify-center">
-                  <img src={icon3} className="w-28" alt="dummy" />
-                  <h1 className="text-3xl font-bold text-green-700">
-                    EXCELLENCE
-                  </h1>
-                  <p className="text-xl">
-                    we hold ourselves to the highest standards of excellence and
-                    professionalism in all aspects of our work. We understand
-                    that our clients entrust us with their most valuable assets,
-                    and we take this responsibility very seriously. As such, we
-                    approach every project with an unwavering commitment to
-                    quality, precision, and attention to detail.
-                  </p>
-                </div>
-
-                <div className="flex flex-col text-center w-80  gap-3 items-center self-start justify-center">
-                  <img src={icon2} className="w-28 text-3xl " alt="dummy" />
-                  <h1 className="text-3xl font-bold text-green-700">RESPECT</h1>
-                  <p className="text-xl">
-                    Respect is a cornerstone of our company culture, and we hold
-                    it in high regard in all our interactions with fellow
-                    employees, clients, contractors, and suppliers. We believe
-                    that by treating everyone with dignity and respect, we can
-                    foster an environment of inclusivity, trust, and
-                    collaboration.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div>
+            <WeOffer />
           </div>
+        </div>
+      </div>
+
+      <div className="w-full font-monserrat">
+        <div className="flex flex-col items-center text-center mt-10 py-20 bg-slate-700 w-full">
+          <h1
+            className="uppercase text-4xl text-warning py-5 font-semibold"
+            data-aos="slide-right"
+          >
+            KNOW more about our company
+          </h1>
+          <p className="text-white md:px-60" data-aos="slide-left">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae qui quasi vero amet neque ipsam deserunt error
+            temporibus sit exercitationem, culpa accusamus dicta animi atque
+            placeat tempore dolorem, obcaecati at! Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Nesciunt ratione voluptatem rerum
+            doloremque omnis mollitia a officia fugit, libero non soluta
+            placeat, corporis, nostrum ad? Architecto aliquid quo
+            exercitationem, omnis ratione ipsam ea. Voluptatum expedita aliquam
+            impedit repellendus quibusdam fuga neque a, tempore velit porro est
+            reprehenderit architecto eveniet ad. Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Praesentium quisquam modi libero,
+            quaerat cupiditate accusamus magni? Ipsum facilis itaque aliquid?
+            Nobis dolore modi dolorem eaque quidem. Incidunt quas error id
+            nesciunt modi explicabo atque esse itaque cum aliquam expedita odio
+            et cumque eaque minus consectetur maxime asperiores ipsa commodi,
+            necessitatibus dicta inventore sit, quisquam est? Rem distinctio
+            sapiente doloribus quisquam asperiores reiciendis magni aspernatur
+            dolorem sequi, odit delectus! Natus voluptate non rem praesentium
+            perspiciatis facere alias eligendi fuga ipsam accusamus!
+          </p>
         </div>
       </div>
     </div>

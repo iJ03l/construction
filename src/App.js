@@ -9,6 +9,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
+import Construction from './pages/Construction';
+import Electrical from './pages/Electrical';
+
 
 function App() {
   const [loading, setLoading] = useState( false )
@@ -37,12 +40,14 @@ function App() {
       ) : (
         <div>
           <Navbar />
-          <div className="pt-32 md:pt-40 ">
+          <div className="pt-24 md:pt-30 ">
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/construction" element={<Construction />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/electrical" element={<Electrical />} />
               <Route path="/projects" element={<Projects />} />
             </Routes>
           </div>

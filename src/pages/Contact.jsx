@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Contact() {
+    useEffect(() => {
+      Aos.init({ duration: 2000 }, []);
+    });
+
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -33,9 +39,12 @@ function Contact() {
   };
 
   return (
-    <div>
-      <div className="w-full h-96" id="image-set1">
-        <h1 className="flex text-white font-monserrat text-5xl uppercase font-semibold items-center justify-center h-full w-full text-center flex-col">
+    <div className="overflow-x-hidden">
+      <div className="w-full h-96 overflow-x-hidden" id="image-set1">
+        <h1
+          className="flex text-white font-monserrat text-5xl uppercase font-semibold items-center justify-center h-full w-full text-center flex-col"
+          data-aos="fade-up"
+        >
           <span className="text-3xl text-green-500">reach{""}</span>
           <span>out to us</span>
         </h1>
@@ -46,10 +55,13 @@ function Contact() {
           id="image-set2"
         >
           <div className="flex flex-col w-full items-left px-0 py-7 md:px-40 md:pt-40 md:py-0 justify-center">
-            <h1 className="md:py-4 md:px-0 px-10 text-3xl font-semibold py-5">
+            <h1
+              className="md:py-4 md:px-0 px-10 text-3xl font-semibold py-5"
+              data-aos="fade-left"
+            >
               Get in touch
             </h1>
-            <p className="md:text-lg md:px-0 px-10">
+            <p className="md:text-lg md:px-0 px-10" data-aos="fade-left">
               We welcome the opportunity to connect with you. Whether you have a
               question, a project in mind, or just want to learn more about our
               services, we encourage you to get in touch. Our team of experts is
@@ -60,7 +72,10 @@ function Contact() {
             </p>
           </div>
 
-          <div className="flex  items-center text-left gap-3 md:gap-4 md:pl-40 md:pr-60 md:py-5 px-10">
+          <div
+            className="flex  items-center text-left gap-3 md:gap-4 md:pl-40 md:pr-60 md:py-5 px-10"
+            data-aos="fade-right"
+          >
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +97,10 @@ function Contact() {
               Wuye, FCT
             </p>
           </div>
-          <div className="flex items center text-left gap-3 md:gap-4 md:pl-40 md:pr-60 md:py-5 px-10">
+          <div
+            className="flex items center text-left gap-3 md:gap-4 md:pl-40 md:pr-60 md:py-5 px-10"
+            data-aos="fade-right"
+          >
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -99,9 +117,14 @@ function Contact() {
                 />
               </svg>
             </span>
-            <p>+234-806-757-8779  +234-708-947-7842</p>
+            <p>
+              +234-806-757-8779 <br /> +234-708-947-7842
+            </p>
           </div>
-          <div className="flex items center text-left gap-3 md:gap-4 md:pl-40 md:pr-60 md:py-5 md:mb-5 mb-5 px-10">
+          <div
+            className="flex items center text-left gap-3 md:gap-4 md:pl-40 md:pr-60 md:py-5 md:mb-5 mb-5 px-10"
+            data-aos="fade-right"
+          >
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -124,10 +147,13 @@ function Contact() {
           </div>
         </div>
         <div className="col-span-12 md:col-span-6">
-          <div className="flex flex-col items-left justify-center md:pr-60 md:pt-40 pl-10 md:pb-20">
-            <h1 className="py-6 px-11 md:px-0 text-xl md:text-3xl font-semibold">
-              ENTER YOUR INFORMATION IN THE FORM BELOW AND SOMEONE FROM RELYANT
-              WILL CONTACT YOU.
+          <div className="flex flex-col items-left justify-center md:pr-60 md:pt-40 md:pl-10 md:pb-20">
+            <h1
+              className="py-6 px-11 md:px-0 text-xl md:text-3xl font-semibold"
+              data-aos="fade-up"
+            >
+              ENTER YOUR INFORMATION IN THE FORM BELOW AND SOMEONE FROM LUCKY
+              LUMAC WILL CONTACT YOU.
             </h1>
 
             <form onSubmit={handleSubmit}>
