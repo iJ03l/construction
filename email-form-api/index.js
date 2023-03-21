@@ -9,7 +9,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // enable CORS
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://luckylumac.com",
+  })
+);
 
 app.post("/send-email", (req, res) => {
   const { fullname, email, phone, message } = req.body;
