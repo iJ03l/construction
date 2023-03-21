@@ -3,15 +3,13 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // enable CORS
-app.use(cors({
-  origin: 'https://construction-wine.vercel.app'
-}));
+app.use(cors());
 
 app.post("/send-email", (req, res) => {
   const { fullname, email, phone, message } = req.body;

@@ -28,7 +28,7 @@ function Contact() {
     };
 
 
-    fetch("http://localhost:3000/send-email", {
+    fetch("http://localhost:3001/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
