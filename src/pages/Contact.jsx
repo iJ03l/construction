@@ -28,7 +28,7 @@ function Contact() {
     };
 
 
-    fetch("https://email-api-xprj3ct.vercel.app/send-email", {
+    fetch("http://localhost:3000/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
