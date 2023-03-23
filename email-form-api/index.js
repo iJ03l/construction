@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -24,8 +24,8 @@ app.post("/send-email", (req, res) => {
 
   const mailOptions = {
     from: "Contact Us Service <y@gmail.com>",
-    to: "info@luckylumacs.com",
-    subject: "Enquiries from your website!",
+    to: "info@luckylumac.com",
+    subject: "A New message from your website!",
     html: `
       <p>Full Name: ${fullname}</p>
       <p>Email: ${email}</p>
