@@ -139,7 +139,7 @@ function Services() {
                 </div>
                 <div className="collapse-content">
                   <p className="font-normal md:text-lg text-sm">
-                    Our team of electricians is equipped to handle any
+                    Our team of electricians are equipped to handle any
                     electrical repair needs that may arise, from power outages
                     and circuit overloads to electrical equipment malfunctions.
                     We use advanced diagnostic tools and techniques to quickly

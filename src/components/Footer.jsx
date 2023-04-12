@@ -9,11 +9,9 @@ function Footer() {
         <p>
           LUCKY LUMACS LTD
           <br />
-          Contact us for efficient energy solutions.
+          <span href="/Contact" className="link text-blue-600 font-semibold">Contact us</span> for efficient energy solutions.
           <br />
-          <a href="/Contact" className="link text-blue-600 font-semibold">
-            info@luckylumacs.com
-          </a>
+          
         </p>
       </div>
       <div className="uppercase">
@@ -42,7 +40,9 @@ function Footer() {
         <span className="footer-title uppercase">reach out</span>
         <a className="link link-hover">PH: +234-806-757-8779</a>
         <a className="link link-hover">PH: +234-708-947-7842</a>
-        <a className="link link-hover">info@luckylumacs.com</a>
+        <a href="mailto:info@luckylumac.com" className="link link-hover">
+          info@luckylumac.com
+        </a>
       </div>
     </footer>
   );

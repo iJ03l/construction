@@ -28,7 +28,7 @@ function Contact() {
     };
 
 
-    fetch("http://localhost:3001/send-email", {
+    fetch("https://luckylumac.com:3001/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -147,7 +147,7 @@ function Contact() {
                 />
               </svg>
             </span>
-            <a href="#" className="link">
+            <a href="mailto:info@luckylumac.com" className="link">
               info@luckylumac.com
             </a>
           </div>
@@ -219,7 +219,6 @@ function Contact() {
                   </div>
                   <div className="form-control mt-6">
                     <button
-                    
                       value="Send"
                       className="btn bg-green-500 border-none"
                     >

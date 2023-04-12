@@ -107,7 +107,7 @@ function Home() {
             <motion.h1
               initial={{ x: -250 }}
               animate={{ x: 0, y: -10 }}
-              className="text-gray-500 uppercase text-[2.3rem] md:text-[2.5rem] text-muted py-1"
+              className="text-gray-500 uppercase text-[2.3rem] md:text-[2.5rem] text-muted py-1 md:mr-0 mr-2"
             >
               <span className="text-warning font-bold uppercase">
                 Empowering progress
@@ -193,7 +193,7 @@ function Home() {
       </section>
 
       <section>
-        <div className="grid md:grid-cols-12 bg-gray-50 overflow-x-hidden">
+        <div className="grid md:grid-cols-12 bg-gray-50 overflow-x-hidden overflow-y-hidden">
           <div className="col-span-12 md:col-span-6 flex flex-col gap-5 md:p-32 p-10">
             <h1
               className="uppercase md:text-5xl text-xl text-center md:text-left tracking-wider text-green-600 font-bold"
@@ -311,10 +311,6 @@ function Home() {
                     We have developed a way to reduce cost by removing the need
                     for a middle man when getting our solar products.
                   </div>
-                  <span className="font-normal md:text-6xl text-center flex items-center justify-center text-green-600 tracking-[25px]">
-                    {" "}
-                    Samuel
-                  </span>
                   <div
                     className="md:text-6xl md:my-20  text-gray-600"
                     data-aos="fade-down"
@@ -466,14 +462,29 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div data-aos="slide-left">
-                <img src={construction} alt="" className="h-[50%] mask1" />
+              <div
+                data-aos="slide-left"
+                className="md:h-auto md:w-auto h-[40vh] w-full"
+              >
+                <img
+                  src={construction}
+                  alt=""
+                  className="md:h-[50%] h-[100%] object-cover
+                 w-full md:w-auto mask1"
+                />
               </div>
             </div>
 
             <div className="flex flex-col md:flex-row gap-1 justify-center items-center md:mb-0 mb-16">
-              <div data-aos="slide-right">
-                <img src={electrical} alt="" className="h-[50%] mask1" />
+              <div
+                data-aos="slide-right"
+                className="md:h-auto md:w-auto h-[40vh] w-full"
+              >
+                <img
+                  src={electrical}
+                  alt=""
+                  className="md:h-[50%] h-[100%] w-full md:w-auto object-cover mask1"
+                />
               </div>
               <div className="md:w-[50%] pl-4" data-aos="slide-left">
                 <h1 className="text-md md:text-2xl  font-semibold text-green-600">
@@ -493,9 +504,7 @@ function Home() {
                 <div className="flex flex-col w-full">
                   <div>
                     <ul className="list-disc font-bold py-3 mask1">
-                      <li>
-                        Electrical installation 
-                      </li>
+                      <li>Electrical installation</li>
                       <li>Electrical repair & maintenance</li>
                       <li>Solar power custom installation</li>
                       <li>Solar equipment procurement</li>
@@ -560,9 +569,6 @@ function Home() {
                   </div>
                   <div>
                     <ul className="text-lg md:text-xl">
-                      <li className="border-b py-2" data-aos="fade-in">
-                        Relyant Global
-                      </li>
                       <li className="border-b py-2" data-aos="fade-in">
                         {" "}
                         Central Asia Development Group (CADG)
